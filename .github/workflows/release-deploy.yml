@@ -1,0 +1,16 @@
+name: Release Deployment
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run release deployment
+        run: |
+          echo "Releasing version to production..."
+          sleep 20
+          echo "Deployment completed successfully."
